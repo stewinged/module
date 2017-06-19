@@ -1,0 +1,76 @@
+.first-menu, .third-menu, .fourth-menu {
+    width: 250px;
+}
+.menu-public i, .first-menu p i {
+    margin-right: 16px;
+}
+.sh-arrow {
+    margin-right: 15px;
+}
+.modal-w400{
+    width:400px;
+}
+.mt0{
+    margin-top:0px;
+    margin-bottom:0px;
+}
+.fz16{
+    font-size: 16px;
+}
+.fz15{
+    font-size:15px;
+}
+.radio-inline input{
+    margin-top:13px;
+}
+.checkCate{
+    width:260px;
+    margin-left:65px;
+}
+.texta{
+    width: 100%;
+    height:100px;
+    resize: none;
+    outline: none;
+}
+.w200{
+    width:260px;
+    line-height: 18px;
+    font-size: 12px;
+    font-weight: normal;
+}
+.tit-text{
+    width: 60px;
+    text-align: right;
+    margin-right: 5px;
+}
+.tip-note{
+    padding-left: 69px;
+    padding-top: 20px;
+}
+.update-info{
+    padding-left: 70px;
+}
+.picContain label{
+    width:60px;
+    text-align: right;
+    font-size:15px;
+    margin-right:5px;
+    color: #666;
+}
+.dataform{
+    width: 260px;
+    position: relative;
+}
+.dataform input{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left:0;
+    top:0;
+    opacity: 0;
+    filter:alpha(opacity=0);
+}
+.btl{
+    border-bottom: 1px dashed #ccc;
+}

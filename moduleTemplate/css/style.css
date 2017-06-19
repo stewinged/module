@@ -1,0 +1,405 @@
+/*额外添加*/
+html, body {
+    height: 100%;
+    background: #f1f1f1;
+    font-family: 'Microsoft YaHei';
+}
+
+.mt5 {
+    margin-top: 5px;
+}
+
+.mt10 {
+    margin-top: 10px;
+}
+
+.align-ct {
+    text-align: center;
+}
+
+.align-l {
+    text-align: left;
+}
+
+.Ndisplay {
+    display: none;
+}
+
+.Bdisplay {
+    display: block;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.IBdisplay {
+    display: inline-block;
+}
+
+.bgf1 {
+    background: #f1f1f1;
+}
+
+.border {
+    border: solid 1px #e3e3e3;
+}
+
+.p20 {
+    padding: 20px;
+}
+
+.p30 {
+    padding: 30px;
+}
+
+.pt20 {
+    padding-top: 20px;
+}
+
+.m20 {
+    margin: 20px;
+}
+
+.m30 {
+    margin: 30px;
+}
+
+.mt30 {
+    margin-top: 30px;
+}
+
+.mt20 {
+    margin-top: 20px;
+}
+
+.mr40 {
+    margin-right: 40px;
+}
+
+.mb20 {
+    margin-bottom: 20px;
+}
+
+.clearfix:after {
+    clear: both;
+    content: '';
+    font-size: 0;
+    display: block;
+    visibility: hidden;
+    height: 0
+}
+
+.mauto {
+    margin: auto;
+}
+
+.weight-bold {
+    font-weight: bold;
+}
+
+.border-bottom-dashed {
+    border-bottom: 1px dashed #E0E0E0;
+}
+
+.img-sm img {
+    width: 78px;
+    height: 78px;
+    margin-right: 5px;
+}
+
+.sidebar .nav-second-level li a {
+    padding-left: 37px;
+}
+
+.cur {
+    color: #ff6e9d;
+}
+
+.positionR {
+    position: relative;
+}
+
+.sidebar {
+    border: 1px solid #E0E0E0;
+    background: #f7f7f7;
+    border-bottom: none;
+    margin: 0 -16px;
+}
+
+.ccj-height {
+    min-height: -webkit-calc(100% - 100px);
+    min-height: -moz-calc(100% - 100px);
+    min-height: calc(100% - 100px);
+}
+
+.h-per100 {
+    height: 100%;
+}
+
+.main {
+    background: #fff;
+    border-top: 1px solid #E0E0E0;
+    border-left: none;
+    height: 100%;
+    margin: 0 -14px;
+}
+
+.siderbar-left {
+    background: #F7F7F7;
+    border-left: 1px solid #E0E0E0;
+}
+
+.main-bg {
+    background: url(../img/main-bg.png) 100% 100%;
+}
+
+.nav.in li a {
+    height: 40px;
+}
+
+.nav-second-level .cur, .nav-second-level .cur:hover {
+    text-decoration: none;
+    background: url(../img/tbg.png) 100% 100% no-repeat;
+
+}
+
+.nav-second-level .cur a, .nav-second-level .cur:hover a {
+    color: #fff;
+}
+
+.fa-dashboard {
+    float: right;
+}
+
+.navside_fir {
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.navside_fir p {
+    font-weight: bold;
+    position: relative;
+    display: block;
+    margin: 5px 15px -1px 15px;
+    padding: 10px 0;
+    font-size: 16px;
+    border-bottom: 1px solid #E0E0E0;
+    cursor: pointer;
+}
+
+.navbar-header span {
+    display: inline-block;
+}
+
+.navbar-header .name, .logo img {
+    vertical-align: middle;
+    line-height: 80px;
+}
+
+.logo img {
+    margin-right: 15px;
+    width: 50px;
+}
+
+.navbar-header .name i {
+    padding-left: 15px;
+    border-left: 1px solid #E0E0E0;
+    font-style: normal;
+    color: #bbb;
+    font-size: 18px;
+}
+
+button {
+    outline: none
+}
+
+/*syc  reg页  验证样式*/
+.clearfix:after {
+    clear: both;
+    content: '';
+    font-size: 0;
+    display: block;
+    visibility: hidden;
+    height: 0
+}
+
+ul, li {
+    list-style: none;
+    padding: 0;
+    margin: 0
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+/*清除栅格的padding*/
+.del-col-left {
+    padding-left: 0 !important;
+}
+
+.del-col-right {
+    padding-right: 0 !important;
+}
+
+.del-col-all {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+
+/*标题*/
+.main-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #666;
+    line-height: 40px;
+}
+
+/*商品类目弹窗*/
+
+.first-menu, .third-menu, .fourth-menu {
+    width: 190px;
+    margin: 10px;
+    border: 1px solid #E0E0E0;
+    height: 260px;
+    overflow-y: auto;
+}
+
+.second-menu li {
+    padding-left: 30px;
+}
+
+.first-menu p {
+    background: #fafafa;
+    padding-left: 10px;
+}
+
+.first-menu p, .second-menu li, .third-menu li, .fourth-menu li {
+    height: 28px;
+    line-height: 26px;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.menu-public li, .first-menu p {
+    cursor: pointer;
+    padding-right: 20px;
+    position: relative;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.third-menu li, .fourth-menu li {
+    padding-left: 10px;
+}
+
+.menu-public li:hover, .first-menu p:hover {
+    color: #f06612;
+    text-decoration: underline;
+}
+
+.menu-public li:hover i, .first-menu p:hover i {
+    border: 1px solid #f06612
+}
+
+.menu-public li:hover i span, .first-menu p:hover i span {
+    background-position: -22px -2px;
+
+}
+
+.menu-public li:hover i span.block, .first-menu p:hover i span.block {
+    background: #F06612;
+}
+
+.menu-public i, .first-menu p i {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #E0E0E0;
+    line-height: 36px;
+    vertical-align: middle;
+    margin-right: 6px;
+    display: inline-block;
+}
+
+.menu-public i span, .first-menu p i span {
+    width: 16px;
+    height: 16px;
+    background: url(../img/sh-tips.png) no-repeat;
+    background-size: 40px;
+    background-position-x: -2px;
+    background-position-y: -2px;
+    display: none;
+}
+.menu-public i span.Bdisplay, .first-menu p i span.Bdisplay {
+    display: block;
+}
+em{
+    font-style: normal;
+}
+
+/**/
+.menu-public i span.block, .first-menu p i span.block {
+    width: 10px;
+    height: 10px;
+    background: #999;
+    margin-top: 2px;
+    margin-left: 2px;
+    display: block;
+}
+
+.sh-arrow {
+    position: absolute;
+    right: 0;
+    margin-top: 7px;
+    margin-right: 7px;
+}
+
+/*上传*/
+
+.update-info{
+	
+}
+.update-lcol{
+	margin-top:20px;
+	position: relative;
+}
+.update-lcol input{
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	cursor: pointer;
+}
+.mg-clear {
+	margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

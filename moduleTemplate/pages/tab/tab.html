@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>tab</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+	</head>
+
+	<body>
+
+		<header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
+			<div class="container">
+				<div class="navbar-header">
+					<span class="logo"><img src="../img/logo.png"/></span>
+					<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+						<ul class="nav navbar-nav">
+							<li class="active">
+								<a href="#">起步</a>
+							</li>
+							<li>
+								<a href="#">全局 CSS 样式</a>
+							</li>
+							<li>
+								<a href="#">组件</a>
+							</li>
+							<li>
+								<a href="#">JavaScript 插件</a>
+							</li>
+							<li>
+								<a href="#">定制</a>
+							</li>
+						</ul>
+						<ul class="nav navbar-nav navbar-right">
+							<li>
+								<a href="#">高薪工作</a>
+							</li>
+							<li>
+								<a href="#">优站精选</a>
+							</li>
+							<li>
+								<a href="#">官方博客</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+		</header>
+
+		<div class="container main-bg ccj-height">
+			<div class="row">
+				<div class="col-xs-2">
+					<div class="navbar-default sidebar h-per100" role="navigation">
+						<div class="sidebar-nav navbar-collapse">
+							<ul class="nav in" id="side-menu">
+								<!--///syc  serach删了-->
+								<li class="active">
+									<!--///syc  加class 和href-->
+									<a href="#/button" class="navside_fir"><i class="fa fa-dashboard fa-fw"></i> 按钮</a>
+
+								</li>
+								<li>
+									<!--///syc  加class 和href-->
+									<a href="#/tab" class="navside_fir"><i class="fa fa-dashboard fa-fw"></i> 页卡切换</a>
+
+								</li>
+								<li>
+									<a href="#/table" class="navside_fir"><i class="fa fa-bar-chart-o fa-fw"></i> 表格<span class="fa arrow"></span></a>
+
+									<!-- /.nav-second-level -->
+								</li>
+								<li>
+									<a href="javascript:;" class="navside_fir"><i class="fa fa-table fa-fw"></i>弹窗</a>
+									<ul class="nav nav-second-level Ndisplay">
+										<li>
+											<a href="#/pannel/categroy" class="navside_sec">类目弹窗</a>
+										</li>
+										<li>
+											<a href="#/pannel/modal" class="navside_sec">提示弹窗</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="#/form" class="navside_fir"><i class="fa fa-edit fa-fw"></i>表单</a>
+								</li>
+								<li>
+									<a href="javascript:;" class="navside_fir"><i class="fa fa-wrench fa-fw"></i>js库<span class="fa arrow"></span></a>
+									<ul class="nav nav-second-level Ndisplay">
+										<li>
+											<a href="#" class="navside_sec">sdk</a>
+										</li>
+										<li>
+											<a href="#/js_module/pages" class="navside_sec">分页</a>
+										</li>
+										<li>
+											<a href="#/js_module/calendar" class="navside_sec">日历</a>
+										</li>
+										<li>
+											<a href="#/js_module/regExp" class="navside_sec">表单验证正则</a>
+										</li>
+									</ul>
+									<!-- /.nav-second-level -->
+								</li>
+
+							</ul>
+						</div>
+						<!-- /.sidebar-collapse -->
+					</div>
+				</div>
+
+				<div class="col-xs-10">
+					<div class="main" id="tab">
+						<div class="panel panel-default m30">
+							<div class="panel-heading">
+								分页
+							</div>
+							<!-- /.panel-heading -->
+							<div class="panel-body positionR">
+								<ul class="ccj-nav ccj-nav-tabs clearfix" id="myTab">
+									<li class="active">
+										<a href="#home" data-toggle="tab">发货时间</a>
+									</li>
+									<li>
+										<a href="#profile" data-toggle="tab">发货地址</a>
+									</li>
+									<li>
+										<a href="#c" data-toggle="tab">发货内容</a>
+									</li>
+								</ul>
+								<div id="myTabContent" class="tab-content">
+									<div class="tab-pane fade active in" id="home">时间</div>
+									<div class="tab-pane fade" id="profile">地址</div>
+									<div class="tab-pane fade" id="c">内容</div>
+
+								</div>
+
+							</div>
+							<!-- /.panel-body -->
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<script src="js/jquery-2.1.4.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>布局</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+
+	</head>
+
+	<body>
+		<header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
+			<div class="container">
+				<div class="navbar-header">
+					<span class="logo"><img src="../img/logo.png"/></span>
+				</div>
+				<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+					<ul class="nav navbar-nav">
+						<li>
+							<a href="#">楚楚街后台模板</a>
+						</li>
+						<!--///syc  起步什么删了-->
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-2">
+					<div class="navbar-default sidebar" role="navigation">
+						<div class="sidebar-nav navbar-collapse">
+							<ul class="nav in" id="side-menu">
+								<!--///syc  serach删了-->
+								<li>
+									<!--///syc  加class 和href-->
+									<a href="#/button" class="navside_fir"><i class="fa fa-dashboard fa-fw"></i> 按钮</a>
+
+								</li>
+								<li>
+									<!--///syc  加class 和href-->
+									<a href="#/tab" class="navside_fir"><i class="fa fa-dashboard fa-fw"></i> 页卡切换</a>
+
+								</li>
+								<li>
+									<a href="#/table" class="navside_fir"><i class="fa fa-bar-chart-o fa-fw"></i> 表格<span class="fa arrow"></span></a>
+
+									<!-- /.nav-second-level -->
+								</li>
+								<li>
+									<a href="javascript:;" class="navside_fir"><i class="fa fa-table fa-fw"></i>弹窗</a>
+									<ul class="nav nav-second-level Ndisplay">
+										<li>
+											<a href="#/pannel/categroy" class="navside_sec">类目弹窗</a>
+										</li>
+										<li>
+											<a href="#/pannel/modal" class="navside_sec">提示弹窗</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="#/form" class="navside_fir"><i class="fa fa-edit fa-fw"></i>表单</a>
+								</li>
+								<li>
+									<a href="javascript:;" class="navside_fir"><i class="fa fa-wrench fa-fw"></i>js库<span class="fa arrow"></span></a>
+									<ul class="nav nav-second-level Ndisplay">
+										<li>
+											<a href="#"  class="navside_sec">sdk</a>
+										</li>
+										<li>
+											<a href="#/js_module/pages"  class="navside_sec">分页</a>
+										</li>
+										<li>
+											<a href="#"  class="navside_sec">页卡切换</a>
+										</li>
+										<li>
+											<a href="#/js_module/calendar"  class="navside_sec">日历</a>
+										</li>
+										<li>
+											<a href="#"  class="navside_sec">表单验证正则</a>
+										</li>
+									</ul>
+									<!-- /.nav-second-level -->
+								</li>
+
+							</ul>
+						</div>
+						<!-- /.sidebar-collapse -->
+					</div>
+				</div>
+				<div class="col-xs-10">
+					<div class="main" id="layout">
+						<div class="row p20">
+							<div class="col-xs-9">
+								<div class="panel panel-default">
+									<div class="panel-heading">布局<a href="javascript:;" class="text-warning float-right">查看更多</a></div>
+									<!-- /.panel-heading -->
+									<div class="panel-body">
+										<div class="text-warning bg-warning p20">
+											注意：店铺优惠券可与店铺其它营销工具（如：全店满送、满减优惠等）叠加使用，请谨慎设置店铺优惠券优惠力度！“展示给买家”指店铺优惠券在店铺首页、商品详情页展示。 
+										</div>
+										
+									</div>
+									<!-- /.panel-body -->
+								</div>
+								<div class="panel panel-default">
+									<div class="panel-heading">布局</div>
+									<!-- /.panel-heading -->
+									<div class="panel-body">
+										<div class="text-warning bg-warning p20">
+											注意：店铺优惠券可与店铺其它营销工具（如：全店满送、满减优惠等）叠加使用，请谨慎设置店铺优惠券优惠力度！“展示给买家”指店铺优惠券在店铺首页、商品详情页展示。 
+										</div>
+										
+									</div>
+									<!-- /.panel-body -->
+								</div>
+							</div>
+							<div class="col-xs-3 del-col-left">
+								<div class="panel panel-default">
+									<div class="panel-heading">布局</div>
+									<!-- /.panel-heading -->
+									<div class="panel-body">
+										<div class="text-warning bg-warning p20">
+											注意：店铺优惠券可与店铺其它营销工具（如：全店满送、满减优惠等）叠加使用，请谨慎设置店铺优惠券优惠力度！“展示给买家”指店铺优惠券在店铺首页、商品详情页展示。 
+										</div>
+										
+									</div>
+									<!-- /.panel-body -->
+								</div>
+							</div>
+						</div>
+						
+						
+							
+							
+					</div>	
+				</div>
+			</div>
+		</div>
+		<script src="js/jquery-2.1.4.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/director.min.js"></script>
+		<!--<script src="js/calendar/addon.js"></script>-->
+		<!--<script src="js/calendar/jquery-ui.min.js"></script>-->
+		<!--<script src="js/calendar/WdatePicker.js"></script>-->
+		<!--<script src="js/calendar/z1.js"></script>-->
+		<!--<script src="js/calendar/z2.js"></script>-->
+		<script>
+			$('.navside_fir').on('click',function(){
+				$('.navside_fir').removeClass('active');
+				$(this).addClass('active');
+				var oUl = $(this).siblings('ul');
+				if(oUl.length>0){
+					if(oUl.hasClass('Ndisplay')){
+						oUl.removeClass('Ndisplay')
+					}else{
+						oUl.addClass('Ndisplay')
+					}
+					var cateSec = $('.navside_sec').filter('.cur');
+					if(cateSec.length > 0){
+						var cateSecWon = oUl.find('.navside_sec').filter('.cur');
+						if(cateSecWon.length == 0){
+							$(this).removeClass('active');
+							cateSec.parent().parent().prev().addClass('active');
+						}
+					}
+				}else{
+					$('.navside_sec').removeClass('cur')
+				}
+			})
+			$('.navside_sec').on('click',function(){
+				$('.navside_fir').removeClass('active');
+				$('.navside_sec').removeClass('cur');
+				$(this).addClass('cur');
+				$(this).parent().parent().prev().addClass('active')
+			})
+			var  route = {
+				"/table":moduleChange,
+				"/button":moduleChange,
+				"/tab":moduleChange,
+				"/form":moduleChange,
+				"/pannel/categroy":moduleChange,
+				"/pannel/modal":moduleChange,
+				"/js_module/pages":moduleChange,
+				"/js_module/calendar":moduleChange
+			}
+
+			//初始化路由
+			var router = Router(route)
+			router.init();
+			function moduleChange(){
+				$('#showModule').empty();
+				var name = location.href.split('#')[1].substring(1);
+				var str = name.indexOf('/');
+				var strId = '';
+				if(str != -1){
+					//说明是二类页卡
+					strId = name.split('/')[1];
+					$('.navside_sec').each(function(i,el){
+						if($(el).attr('href').split('#')[1].substring(1) == name){
+							$(el).addClass('cur');
+							$(el).parent().parent().removeClass('Ndisplay').prev().addClass('active');
+						}
+					})
+
+				}else{
+					strId = name;
+					$('.navside_fir').each(function(i,el){
+						if($(el).attr('href').indexOf('#') != -1){
+							if($(el).attr('href').split('#')[1].substring(1) == name){
+								$(el).addClass('active');
+							}
+						}
+
+					})
+				}
+				var URL = name + '.html';
+				$('#showModule').load(URL + ' #'+strId,function(){
+
+				});
+
+			}
+		</script>
+	</body>
+
+</html>

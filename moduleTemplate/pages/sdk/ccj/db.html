@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>localstorage和cookie相关操作</title>
+    <link rel="stylesheet" href="/chuchujie/css/bootstrap.css">
+</head>
+
+<body>
+    <div class="container">
+        <blockquote>
+            <p>请打开console查看代码演示效果</p>
+        </blockquote>
+        <div class="panel panel-default">
+            <div class="panel-heading">localstorage相关操作</div>
+            <div class="panel-body">
+                <button id="btn1" class="btn btn-default">设置KEY1 3秒过期</button><br/>
+                <pre>
+                    $("#btn1").click(function () { ccj.db.setItem("testkey1", "hahaha", 3); console.log(ccj.db.getItem("testkey1")); });
+                </pre>
+                <button id="btn2" class="btn btn-default">获取KEY1</button><br/>
+                <pre>
+                    $("#btn2").click(function () { console.log(ccj.db.getItem("testkey1")); });
+                </pre>
+                <button id="btn3" class="btn btn-default">删除KEY1</button><br/>
+                <pre>
+                    $("#btn3").click(function () { ccj.db.removeItem("testkey1"); console.log(ccj.db.getItem("testkey1")); });
+                </pre>
+                <button id="btn4" class="btn btn-default">设置KEY2 永久</button><br/>
+                <pre>
+                    $("#btn4").click(function () { ccj.db.setItem("testkey2", "hahaha"); console.log(ccj.db.getItem("testkey2")); });
+                </pre>
+                <button id="btn5" class="btn btn-default">获取KEY2</button><br/>
+                <pre>
+                    $("#btn5").click(function () { console.log(ccj.db.getItem("testkey2")); });
+                </pre>
+                <button id="btn6" class="btn btn-default">删除KEY2</button><br/>
+                <pre>
+                    $("#btn6").click(function () { ccj.db.removeItem("testkey2"); console.log(ccj.db.getItem("testkey2")); });
+                </pre>
+                <br>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">cookie相关操作</div>
+            <div class="panel-body">
+                <button id="c1" class="btn btn-default">设置cookie</button><br>
+                <pre>
+                    $('#c1').click(function () { ccj.db.setCookie('test1', 'yes', 1); });
+                </pre>
+                <button id="c2" class="btn btn-default">获取cookie</button><br>
+                <pre>
+                    $('#c2').click(function () { alert(ccj.db.getCookie('test1')); });
+                </pre>
+                <button id="c3" class="btn btn-default">删除cookie过期</button><br>
+                <pre>
+                    $('#c3').click(function () { ccj.db.removeCookie('test1'); });
+                </pre>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="/chuchujie/js/_ccj/_require.js"></script>
+    <script>
+        require(['jquery' ,'db'], function ($, ccj) {
+            $("#btn1").click(function () {
+                ccj.db.setItem("testkey1", "hahaha", 3);
+                console.log(ccj.db.getItem("testkey1"));
+            });
+
+            $("#btn2").click(function () {
+                console.log(ccj.db.getItem("testkey1"));
+            });
+
+            $("#btn3").click(function () {
+                ccj.db.removeItem("testkey1");
+                console.log(ccj.db.getItem("testkey1"));
+            });
+
+            $("#btn4").click(function () {
+                ccj.db.setItem("testkey2", "hahaha");
+                console.log(ccj.db.getItem("testkey2"));
+            });
+
+            $("#btn5").click(function () {
+                console.log(ccj.db.getItem("testkey2"));
+            });
+
+            $("#btn6").click(function () {
+                ccj.db.removeItem("testkey2");
+                console.log(ccj.db.getItem("testkey2"));
+            });
+
+            $('#c1').click(function () {
+                ccj.db.setCookie('test1', 'yes', 1);
+            });
+            $('#c2').click(function () {
+                alert(ccj.db.getCookie('test1'));
+            });
+            $('#c3').click(function () {
+                ccj.db.removeCookie('test1');
+            });
+        })
+    </script>
+</body>
+
+</html>

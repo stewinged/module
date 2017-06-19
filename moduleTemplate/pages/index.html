@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="../css/style.css" />
+		<!--[if lt IE 9]>
+			<script src="../js/html5shiv.js"></script>
+			<script src="../js/respond.min.js"></script>
+    	<![endif]-->
+	</head>
+
+	<body>
+		<header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
+			<div class="container">
+				<div class="navbar-header">
+					<span class="logo"><img src="../img/logo.png"/></span>
+					<span class="name"><i>楚楚街后台模板</i></span>
+				</div>
+			</div>
+		</header>
+
+		<div class="container main-bg ccj-height">
+			<div class="row">
+				<div class="col-xs-2">
+					<div class="navbar-default sidebar h-per100" role="navigation">
+						<div class="sidebar-nav navbar-collapse">
+							<ul class="nav in" id="side-menu">
+								<!--///syc  serach删了-->
+								<li class="navside_fir">
+									<!--///syc  加class 和href-->
+
+									<p class="navside_first"><i class="fa-dashboard"><img src="../img/chevron.png"/></i>ui控件</p>
+
+									<ul class="nav nav-second-level">
+										<li class="navside_sec">
+											<a href="#/ui/button" >按钮</a>
+										</li>
+										<li class="navside_sec">
+											<a href="#/ui/fontsize">字体</a>
+										</li>
+										<li class="navside_sec">
+											<a href="#/ui/text">文本样式</a>
+										</li>
+										<li class="navside_sec">
+											<a href="#/ui/layout">布局</a>
+										</li>
+									</ul>
+
+								</li>
+								<li class="navside_fir">
+
+									<p class="navside_first"><i class="fa-dashboard"><img src="../img/chevron.png"/></i> 页卡切换</p>
+									<ul class="nav nav-second-level">
+										<li class="navside_sec">
+											<a href="#/tab/tab">页卡切换</a>
+										</li>
+									</ul>
+								</li>
+								<li class="navside_fir">
+
+									<p class="navside_first"><i class="fa-dashboard"><img src="../img/chevron.png"/></i> 示例页面</p>
+									<ul class="nav nav-second-level">
+										<li class="navside_sec">
+											<a href="#/model/model">示例</a>
+										</li>
+										<li class="navside_sec">
+											<a href="../pages/showmodule.html" target="_blank">详情通用信息</a>
+										</li>
+									</ul>
+								</li>
+
+								<li class="navside_fir">
+									<p class="navside_first"> <i class="fa-dashboard"><img src="../img/chevron.png"/></i>表格<span class="fa arrow"></span></p>
+
+									<ul class="nav nav-second-level">
+										<li class="navside_sec">
+											<a href="#/table/table">表格</a>
+										</li>
+									</ul>
+
+									<!-- /.nav-second-level -->
+								</li>
+								<li class="navside_fir">
+									<p class="navside_first"><i class="fa-dashboard"><img src="../img/chevron.png"/></i>弹窗</p>
+									<ul class="nav nav-second-level">
+										<li class="navside_sec">
+											<a href="#/pannel/modal">提示弹窗</a>
+										</li>
+									</ul>
+								</li>
+								<li class="navside_fir">
+									<p class="navside_first"><i class="fa-dashboard"><img src="../img/chevron.png"/></i>表单</p>
+									<ul class="nav nav-second-level">
+										<li class="navside_sec">
+											<a href="#/form/form">表单</a>
+										</li>
+									</ul>
+								</li>
+								<li class="navside_fir">
+									<p class="navside_first"><i class="fa-dashboard"><img src="../img/chevron.png"/></i>js库<span class="fa arrow"></span></p>
+									<ul class="nav nav-second-level">
+										<li  class="navside_sec">
+											<a href="#/sdk/index">sdk</a>
+										</li>
+										<li  class="navside_sec">
+											<a href="#/js_module/pages">分页</a>
+										</li>
+										<li  class="navside_sec">
+											<a href="#/js_module/regExp">表单验证正则</a>
+										</li>
+									</ul>
+									<!-- /.nav-second-level -->
+								</li>
+
+							</ul>
+						</div>
+						<!-- /.sidebar-collapse -->
+					</div>
+				</div>
+				<div class="col-xs-10" id="showModule">
+					<!--按钮样式-->
+					<div class="main" id="button">
+						<div class="panel panel-default m30">
+							<div class="panel-heading">
+								按钮样式
+							</div>
+							<!-- /.panel-heading -->
+							<div class="panel-body">
+								<h4>默认按钮样式</h4>
+								<p>
+									<button type="button" class="btn btn-outline">Outline</button>
+									<button type="button" class="btn btn-default">Default</button>
+									<button type="button" class="btn btn-primary">Primary</button>
+									<button type="button" class="btn btn-success">Success</button>
+									<button type="button" class="btn btn-info">Info</button>
+									<button type="button" class="btn btn-warning">Warning</button>
+									<button type="button" class="btn btn-danger">Danger</button>
+									<button type="button" class="btn btn-link">Link</button>
+								</p>
+								<br>
+								<h4>禁用按钮样式</h4>
+								<p>
+									<button type="button" class="btn btn-outline disabled">Outline</button>
+									<button type="button" class="btn btn-default disabled">Default</button>
+									<button type="button" class="btn btn-primary disabled">Primary</button>
+									<button type="button" class="btn btn-success disabled">Success</button>
+									<button type="button" class="btn btn-info disabled">Info</button>
+									<button type="button" class="btn btn-warning disabled">Warning</button>
+									<button type="button" class="btn btn-danger disabled">Danger</button>
+									<button type="button" class="btn btn-link disabled">Link</button>
+								</p>
+								<br>
+								<h4>按钮的大小</h4>
+								<p>
+									<button type="button" class="btn btn-default btn-lg">Large button</button>
+									<button type="button" class="btn btn-default">Default button</button>
+									<button type="button" class="btn btn-default btn-sm">Small button</button>
+									<button type="button" class="btn btn-default btn-xs">Mini button</button>
+									<br>
+									<br>
+									<button type="button" class="btn btn-default btn-lg btn-block">Block level button</button>
+								</p>
+							</div>
+							<!-- /.panel-body -->
+						</div>
+
+
+
+					</div>
+					<!--表格-->
+						
+				</div>
+			</div>
+		</div>
+
+		<!--<script src="js/jquery-2.1.4.min.js"></script>-->
+		<!--<script src="js/bootstrap.min.js"></script>-->
+		<!--<script src="js/director.min.js"></script>-->
+		<script src="../js/_ccj/_require.js"></script>
+		<script src="../js/index.js"></script>
+		<!--<script src="js/calendar/_require.js"></script>-->
+		<!--<script src="js/calendar/date.js"></script>-->
+		<script id="modulejs"></script>
+	</body>
+
+</html>

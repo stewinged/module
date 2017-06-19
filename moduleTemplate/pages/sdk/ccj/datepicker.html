@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>日期选择器</title>
+    <link rel="stylesheet" href="/chuchujie/css/bootstrap.css">
+    <link rel="stylesheet" href="/chuchujie/css/jqui.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="panel panel-default">
+            <div class="panel-heading">日期选择器</div>
+            <div class="panel-body">
+                <p>点击输入框查看效果</p>
+                <div class="form-inline">
+                    <input type="text" onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})" value="2016-01-02 10:30:02" class="form-control Wdate"
+                    />
+                </div>
+                <br>
+                <pre>
+                    只需引用datePicker模块，input绑定WdatePicker()即可 require(['datePicker'], function () {})
+                </pre>
+            </div>
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="/chuchujie/js/_ccj/_require.js"></script>
+    <script>
+        require(['datePicker'], function ($) {
+            jQuery('#timer').datetimepicker({
+                timeFormat: "HH:mm:ss",
+                dateFormat: "yymmdd"
+            });
+        })
+    </script>
+</body>
+
+</html>
