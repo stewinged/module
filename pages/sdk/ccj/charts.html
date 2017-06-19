@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>图表使用</title>
+    <link rel="stylesheet" href="/chuchujie/css/bootstrap.css">
+</head>
+
+<body>
+    <div class="container">
+        <h3>1. 柱状图演示</h3>
+        <div id="bar" style="width: 500px; height: 400px;"></div>
+        <pre>
+            var eg1 = document.getElementById('bar'); ccj.charts.bar(eg1, '演示：title', ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"], [5, 20, 36,
+            10, 10, 20], '销量');
+        </pre>
+
+        <h3>2. 饼状图演示</h3>
+        <div id="pie" style="width: 500px; height: 400px;"></div>
+        <pre>
+            var eg2 = document.getElementById('pie'); ccj.charts.pie(eg2, '日销售数目', [111,234,567,345,784], ['葡萄', '橘子', '香蕉', '苹果', '梨'],
+            '日销量');
+        </pre>
+
+        <h3>3. 折线图演示</h3>
+        <div id="line" style="width: 500px; height: 400px;"></div>
+        <pre>
+            var eg3 = document.getElementById('line'); ccj.charts.line(eg3, '演示：title', ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"], [5, 20, 36,
+            10, 10, 20], '销量');
+        </pre>
+    </div>
+
+    <script type="text/javascript" src="/chuchujie/js/_ccj/_require.js"></script>
+    <script>
+        require(['charts'], function (ccj) {
+            var eg1 = document.getElementById('bar');
+            ccj.charts.bar(eg1, '演示：title', ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"], [5, 20, 36, 10, 10, 20], '销量');
+
+            var eg2 = document.getElementById('pie');
+            ccj.charts.pie(eg2, '日销售数目', [111,234,567,345,784], ['葡萄', '橘子', '香蕉', '苹果', '梨'], '日销量');
+
+            var eg3 = document.getElementById('line');
+            ccj.charts.line(eg3, '演示：title', ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"], [5, 20, 36, 10, 10, 20], '销量');
+        })
+    </script>
+</body>
+
+</html>

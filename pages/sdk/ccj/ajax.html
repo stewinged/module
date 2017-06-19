@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax使用</title>
+    <link rel="stylesheet" href="/chuchujie/css/bootstrap.css">
+    <style>
+        .res {
+            width: 400px;
+            height: 40px;
+            border: 1px solid #00B9DF;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading">ajax使用示例</div>
+        <div class="panel-body">
+            <button id="sendAjax" class="btn btn-default">点击发送get请求</button><br>
+            <div id="res1" class="res"></div><br>
+            <p>用法：</p>
+            <pre>
+函数：  ccj.ajax.get(url,data,successFn, errorFn);
+        其中errorFn为可选参数
+示例：
+ccj.ajax.get(
+    'http://api.chuchujie.com/api/',
+    {
+        client: JSON.stringify({
+            "ageGroup": "AG_0to24",
+            "channel": "QD_web_webkit",
+            "deviceId": "0",
+            "gender": "0",
+            "imei": "0",
+            "packageName": "com.culiu.purchase",
+            "platform": "wap",
+            "sessionId": "0",
+            "shopToken": "0",
+            "userId": "0",
+            "version": "1.0",
+            "xingeToken": ""
+        }),
+        query: JSON.stringify({"module": "brand", "category": "all", "function": "list"})
+    },
+    function (data) {
+        console.log(data);
+        $('#res1').text('返回数据请查看console');
+    }
+);
+            </pre><br>
+
+            <div>
+                <button id="postAjax" class="btn btn-default">点击发送post请求</button>
+                <div id="res2" class="res"></div>
+                <p>用法：</p>
+                <pre>
+函数：  ccj.ajax.post(url,data,successFn, errorFn);
+        其中errorFn为可选参数
+示例：
+ccj.ajax.post(
+    'http://wx.chuchujie.com/api.php',
+    {
+        data:JSON.stringify({"imei":"0","channel":"QD_appstore","package_name":"com.culiu.huanletao","platform":"iphone","client_version":"3.1.5","sdkVersion":"9.3.5","ageGroup":"AG_0to24","api_version":"v5","method":"product_detail","gender":"1","token":"","userId":"","product_id":1001644624})
+    },
+    function (data) {
+        console.log(data);
+        $('#res2').text('返回数据请查看console');
+    }
+);
+                </pre>
+            </div>
+        </div>
+        
+    </div>
+
+    
+</div>
+
+<script type="text/javascript" src="/chuchujie/js/_ccj/_require.js"></script>
+<script>
+    require(['server'], function (ccj) {
+        $('#sendAjax').click(function () {
+            // get请求
+            ccj.ajax.get(
+                'http://api.chuchujie.com/api/',
+                {
+                    client: JSON.stringify({
+                        "ageGroup": "AG_0to24",
+                        "channel": "QD_web_webkit",
+                        "deviceId": "0",
+                        "gender": "0",
+                        "imei": "0",
+                        "packageName": "com.culiu.purchase",
+                        "platform": "wap",
+                        "sessionId": "0",
+                        "shopToken": "0",
+                        "userId": "0",
+                        "version": "1.0",
+                        "xingeToken": ""
+                    }),
+                    query: JSON.stringify({"module": "brand", "category": "all", "function": "list"})
+                },
+                function (data) {
+                    console.log(data);
+                    $('#res1').text('返回数据请查看console');
+                }
+            );
+        });
+
+        $('#postAjax').click(function () {
+            // post请求
+            ccj.ajax.post(
+                'http://wx.chuchujie.com/api.php',
+                {
+                    data:JSON.stringify({"imei":"0","channel":"QD_appstore","package_name":"com.culiu.huanletao","platform":"iphone","client_version":"3.1.5","sdkVersion":"9.3.5","ageGroup":"AG_0to24","api_version":"v5","method":"product_detail","gender":"1","token":"","userId":"","product_id":1001644624})
+                },
+                function (data) {
+                    console.log(data);
+                    $('#res2').text('返回数据请查看console');
+                }
+            );
+        })
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图表使用</title>
+    <link rel="stylesheet" href="/chuchujie/css/bootstrap.css">
+    <style>
+        .res {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!--
+    <div class="panel panel-default">
+        <div class="panel-heading"></div>
+        <div class="panel-body">
+
+        </div>
+    </div>
+    -->
+    <h1>工具类使用</h1>
+    <div class="panel panel-default">
+        <div class="panel-heading">1. 获取当前页url参数</div>
+        <div class="panel-body">
+            <button id="btn1" class="btn btn-default">获取当前页url中id参数的值</button>
+            <pre>
+                $('#btn1').click(function () {
+                    $('#r1').text(ccj.utils.currentUrl.getParam('id'));
+                });
+            </pre>
+            <p id="r1" class="res"></p>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">2. 获取url的参数</div>
+        <div class="panel-body">
+            <button id="btn2" class="btn btn-default">获取参数传入的url中id参数的值</button>
+            <pre>
+                $('#btn2').click(function () {
+                    $('#r2').text(ccj.utils.urlTools.getParam('http://www.baidu.com?id=456789', 'id'));
+                });
+            </pre>
+            <p id="r2" class="res"></p>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">3. 转换php时间戳为所需格式的时间戳</div>
+        <div class="panel-body">
+            <p>php生成的时间戳为： 1478162107</p>
+            <div id="r3">
+                <ul>
+                    <li>默认类型：<span></span></li>
+                    <li>YY-MM-DD hh:mm类型：<span></span></li>
+                    <li>hh:mm类型：<span></span></li>
+                    <li>MM月D日类型：<span></span></li>
+                </ul>
+                <p>使用函数为：ccj.utils.timeFormat(timestamp, 'YY-MM-DD hh:mm:ss')</p>
+                <p>其中YYYY代表年份，MM代表月份，DD代表日期，hh代表小时，mm代表分钟，ss代表秒</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script type="text/javascript" src="/chuchujie/js/_ccj/_require.js"></script>
+    <script>
+        require(['jquery' ,'utils'], function ($, ccj) {
+            $('#btn1').click(function () {
+                $('#r1').text(ccj.utils.currentUrl.getParam('id'));
+            });
+
+            $('#btn2').click(function () {
+                $('#r2').text(ccj.utils.urlTools.getParam('http://www.baidu.com?id=456789', 'id'));
+            });
+
+            $('#r3 ul li').eq(0).find('span').text(ccj.utils.timeFormat(1478162107));
+            $('#r3 ul li').eq(1).find('span').text(ccj.utils.timeFormat(1478162107, 'YY-MM-DD hh:mm'));
+            $('#r3 ul li').eq(2).find('span').text(ccj.utils.timeFormat(1478162107, 'hh:mm'));
+            $('#r3 ul li').eq(3).find('span').text(ccj.utils.timeFormat(1478162107, 'MM月D日'));
+        })
+    </script>
+</body>
+</html>

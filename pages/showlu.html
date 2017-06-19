@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="../css/style.css" />
+	
+		<!--[if lt IE 9]>
+			<script src="../js/html5shiv.js"></script>
+			<script src="../js/respond.min.js"></script>
+    	<![endif]-->
+	</head>
+
+	<body>
+		<header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
+			<div class="container">
+				<div class="navbar-header">
+					<span class="logo"><img src="../img/logo.png"/></span>
+					<span class="name"><i>楚楚街后台模板</i></span>
+				</div>
+			</div>
+		</header>
+
+		<div class="container main-bg ccj-height">
+			<div class="row">
+				<div class="col-xs-2">
+					<div class="navbar-default sidebar h-per100" role="navigation">
+						<div class="sidebar-nav navbar-collapse">
+							<ul class="nav in" id="side-menu">
+								<!--///syc  serach删了-->
+								<li class="navside_fir">
+									<!--///syc  加class 和href-->
+
+									<p class="navside_first"><i class="fa-dashboard"><img src="../img/chevron.png"/></i>ui控件</p>
+
+									<ul class="nav nav-second-level">
+										<li class="navside_sec">
+											<a href="#/ui/button">按钮</a>
+										</li>
+										<li class="navside_sec">
+											<a href="#/ui/fontsize">字体</a>
+										</li>
+										<li class="navside_sec">
+											<a href="#/ui/text">文本样式</a>
+										</li>
+										<li class="navside_sec">
+											<a href="#/ui/layout">布局</a>
+										</li>
+									</ul>
+
+								</li>
+								<li class="navside_fir">
+
+									<p class="navside_first"><i class="fa-dashboard"><img src="../img/chevron.png"/></i> 页卡切换</p>
+									<ul class="nav nav-second-level">
+										<li class="navside_sec">
+											<a href="#/tab/tab">页卡切换</a>
+										</li>
+									</ul>
+								</li>
+								<li class="navside_fir">
+
+									<p class="navside_first"><i class="fa-dashboard"><img src="../img/chevron.png"/></i> 示例页面</p>
+									<ul class="nav nav-second-level">
+										<li class="navside_sec">
+											<a href="#/model/model">示例</a>
+										</li>
+									</ul>
+								</li>
+
+								<li class="navside_fir">
+									<p class="navside_first"> <i class="fa-dashboard"><img src="../img/chevron.png"/></i>表格<span class="fa arrow"></span></p>
+
+									<ul class="nav nav-second-level">
+										<li class="navside_sec">
+											<a href="#/table/table">表格</a>
+										</li>
+									</ul>
+
+									<!-- /.nav-second-level -->
+								</li>
+								<li class="navside_fir">
+									<p class="navside_first"><i class="fa-dashboard"><img src="../img/chevron.png"/></i>弹窗</p>
+									<ul class="nav nav-second-level">
+										<li class="navside_sec">
+											<a href="#/pannel/modal">提示弹窗</a>
+										</li>
+									</ul>
+								</li>
+								<li class="navside_fir">
+									<p class="navside_first"><i class="fa-dashboard"><img src="../img/chevron.png"/></i>表单</p>
+									<ul class="nav nav-second-level">
+										<li class="navside_sec">
+											<a href="#/form/form">表单</a>
+										</li>
+									</ul>
+								</li>
+								<li class="navside_fir">
+									<p class="navside_first"><i class="fa-dashboard"><img src="../img/chevron.png"/></i>js库<span class="fa arrow"></span></p>
+									<ul class="nav nav-second-level">
+										<li class="navside_sec">
+											<a href="#/sdk/index">sdk</a>
+										</li>
+										<li class="navside_sec">
+											<a href="#/js_module/pages">分页</a>
+										</li>
+										<li class="navside_sec">
+											<a href="#/js_module/regExp">表单验证正则</a>
+										</li>
+									</ul>
+									<!-- /.nav-second-level -->
+								</li>
+
+							</ul>
+						</div>
+						<!-- /.sidebar-collapse -->
+					</div>
+				</div>
+				<div class="col-xs-10" id="showModule">
+					<!--按钮样式-->
+					<div class="main" id="show">
+						<!--文本弹窗-->
+						<div class="modal fade create-general-txt" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" style="display: none;">
+							<div class="modal-dialog modal-w500">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+										<h4 class="modal-title">创建通用文字</h4>
+									</div>
+									<div class="modal-body">
+										<!--通用文字-->
+										<ul class="clearfix popup-category">
+											<li class="fl">
+												<ul class="first-menu ">
+													<li>
+														<p><i><span></span></i>女装<img src="../img/sh-arrow.png" class="sh-arrow" /></p>
+														<ul class="second-menu menu-public">
+															<li><i><span class="block"></span></i>连衣裙<img src="../img/sh-arrow.png" class="sh-arrow" /></li>
+															<li><i><span></span></i>连衣裙<img src="../img/sh-arrow.png" class="sh-arrow" /></li>
+															<li><i><span></span></i>连衣裙<img src="../img/sh-arrow.png" class="sh-arrow" /></li>
+															<li><i><span></span></i>连衣裙<img src="../img/sh-arrow.png" class="sh-arrow" /></li>
+															<li><i><span></span></i>连衣裙<img src="../img/sh-arrow.png" class="sh-arrow" /></li>
+															<li><i><span></span></i>连衣裙<img src="../img/sh-arrow.png" class="sh-arrow" /></li>
+															<li><i><span></span></i>连衣裙<img src="../img/sh-arrow.png" class="sh-arrow" /></li>
+															<li><i><span></span></i>连衣裙<img src="../img/sh-arrow.png" class="sh-arrow" /></li>
+							
+														</ul>
+													</li>
+													<li>
+														<p><i><span></span></i>男装<img src="../img/sh-arrow.png" class="sh-arrow" /></p>
+							
+													</li>
+													<li>
+														<p><i><span></span></i>鞋靴<img src="../img/sh-arrow.png" class="sh-arrow" /></p>
+							
+													</li>
+													<li>
+														<p><i><span></span></i>女装<img src="../img/sh-arrow.png" class="sh-arrow" /></p>
+							
+													</li>
+												</ul>
+							
+											</li>
+											<li class="fl">
+												<ul class="third-menu menu-public">
+													<li><i><span></span></i>牛仔裤<img src="../img/sh-arrow.png" class="sh-arrow" /></li>
+													<li><i><span></span></i>短裤<img src="../img/sh-arrow.png" class="sh-arrow" /></li>
+													<li><i><span></span></i>短裤<img src="../img/sh-arrow.png" class="sh-arrow" /></li>
+													<li><i><span></span></i>短裤<img src="../img/sh-arrow.png" class="sh-arrow" /></li>
+													<li><i><span></span></i>短裤<img src="../img/sh-arrow.png" class="sh-arrow" /></li>
+													<li><i><span></span></i>短裤<img src="../img/sh-arrow.png" class="sh-arrow" /></li>
+													<li><i><span></span></i>短裤<img src="../img/sh-arrow.png" class="sh-arrow" /></li>
+													<li><i><span></span></i>短裤<img src="../img/sh-arrow.png" class="sh-arrow" /></li>
+												</ul>
+											</li>
+											<li class="fl">
+												<ul class="fourth-menu menu-public">
+													<li><i><span></span></i>连衣裙<img src="../img/sh-arrow.png" class="sh-arrow" /></li>
+													<li><i><span></span></i>短裙<img src="../img/sh-arrow.png" class="sh-arrow" /></li>
+													<li><i><span></span></i>短裙<img src="../img/sh-arrow.png" class="sh-arrow" /></li>
+													<li><i><span></span></i>连衣裙<img src="../img/sh-arrow.png" class="sh-arrow" /></li>
+													<li><i><span></span></i>短裙<img src="../img/sh-arrow.png" class="sh-arrow" /></li>
+													<li><i><span></span></i>连衣裙<img src="../img/sh-arrow.png" class="sh-arrow" /></li>
+													<li><i><span></span></i>连衣裙<img src="../img/sh-arrow.png" class="sh-arrow" /></li>
+													<li><i><span></span></i>短裙<img src="../img/sh-arrow.png" class="sh-arrow" /></li>
+												</ul>
+											</li>
+										</ul>
+	
+										<!--end-->
+									</div>
+									<div class="modal-footer align-ct">
+										<button type="button" class="btn btn-outline" data-dismiss="modal">提交</button>
+										<button type="button" class="btn btn-outline" data-dismiss="modal">取消</button>
+									</div>
+								</div>
+								<!-- /.modal-content -->
+							</div>
+							<!-- /.modal-dialog -->
+						</div>
+						
+						<!--通用图片-->
+						<div class="modal fade create-general-photo" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" style="display: none;">
+							<div class="modal-dialog modal-default">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+										<h4 class="modal-title">创建通用图片</h4>
+									</div>
+									<div class="modal-body">
+										<!---->
+										<div class="main-title">图片:</div>
+										<div class="update-lcol">
+											<img src="../img/addimg.png"/>
+											<input type="file" name="" id="" value="" />
+										</div>
+										<div class="update-info">
+											<h6>1. 尺寸：固定宽高 单张宽340px,高130px,大小≤200k。</h6>
+											<h6>2. 格式：JPG,PNG。</h6>
+											<h6>3. 点击已上传的图片可修改</h6>
+										</div>
+										
+										<!---->
+										<div class="main-title">适用范围:</div>
+										<ul class="clearfix popup-category">
+											<li class="fl">
+												<ul class="first-menu ">
+													<li>
+														<p><i><span></span></i>女装<img src="../img/sh-arrow.png" class="sh-arrow" /></p>
+														<ul class="second-menu menu-public">
+															<li><i><span class="block"></span></i>连衣裙<img src="../img/sh-arrow.png" class="sh-arrow" /></li>
+															<li><i><span></span></i>连衣裙<img src="../img/sh-arrow.png" class="sh-arrow" /></li>
+															<li><i><span></span></i>连衣裙<img src="../img/sh-arrow.png" class="sh-arrow" /></li>
+															<li><i><span></span></i>连衣裙<img src="../img/sh-arrow.png" class="sh-arrow" /></li>
+															<li><i><span></span></i>连衣裙<img src="../img/sh-arrow.png" class="sh-arrow" /></li>
+															<li><i><span></span></i>连衣裙<img src="../img/sh-arrow.png" class="sh-arrow" /></li>
+															<li><i><span></span></i>连衣裙<img src="../img/sh-arrow.png" class="sh-arrow" /></li>
+															<li><i><span></span></i>连衣裙<img src="../img/sh-arrow.png" class="sh-arrow" /></li>
+							
+														</ul>
+													</li>
+													<li>
+														<p><i><span></span></i>男装<img src="../img/sh-arrow.png" class="sh-arrow" /></p>
+							
+													</li>
+													<li>
+														<p><i><span></span></i>鞋靴<img src="../img/sh-arrow.png" class="sh-arrow" /></p>
+							
+													</li>
+													<li>
+														<p><i><span></span></i>女装<img src="../img/sh-arrow.png" class="sh-arrow" /></p>
+							
+													</li>
+												</ul>
+							
+											</li>
+											<li class="fl">
+												<ul class="third-menu menu-public">
+													<li><i><span></span></i>牛仔裤<img src="../img/sh-arrow.png" class="sh-arrow" /></li>
+													<li><i><span></span></i>短裤<img src="../img/sh-arrow.png" class="sh-arrow" /></li>
+													<li><i><span></span></i>短裤<img src="../img/sh-arrow.png" class="sh-arrow" /></li>
+													<li><i><span></span></i>短裤<img src="../img/sh-arrow.png" class="sh-arrow" /></li>
+													<li><i><span></span></i>短裤<img src="../img/sh-arrow.png" class="sh-arrow" /></li>
+													<li><i><span></span></i>短裤<img src="../img/sh-arrow.png" class="sh-arrow" /></li>
+													<li><i><span></span></i>短裤<img src="../img/sh-arrow.png" class="sh-arrow" /></li>
+													<li><i><span></span></i>短裤<img src="../img/sh-arrow.png" class="sh-arrow" /></li>
+												</ul>
+											</li>
+											<li class="fl">
+												<ul class="fourth-menu menu-public">
+													<li><i><span></span></i>连衣裙<img src="../img/sh-arrow.png" class="sh-arrow" /></li>
+													<li><i><span></span></i>短裙<img src="../img/sh-arrow.png" class="sh-arrow" /></li>
+													<li><i><span></span></i>短裙<img src="../img/sh-arrow.png" class="sh-arrow" /></li>
+													<li><i><span></span></i>连衣裙<img src="../img/sh-arrow.png" class="sh-arrow" /></li>
+													<li><i><span></span></i>短裙<img src="../img/sh-arrow.png" class="sh-arrow" /></li>
+													<li><i><span></span></i>连衣裙<img src="../img/sh-arrow.png" class="sh-arrow" /></li>
+													<li><i><span></span></i>连衣裙<img src="../img/sh-arrow.png" class="sh-arrow" /></li>
+													<li><i><span></span></i>短裙<img src="../img/sh-arrow.png" class="sh-arrow" /></li>
+												</ul>
+											</li>
+										</ul>
+	
+										<!--end-->
+									</div>
+									<div class="modal-footer align-ct">
+										<button type="button" class="btn btn-outline" data-dismiss="modal">提交</button>
+										<button type="button" class="btn btn-outline" data-dismiss="modal">取消</button>
+									</div>
+								</div>
+								<!-- /.modal-content -->
+							</div>
+							<!-- /.modal-dialog -->
+						</div>
+						
+						
+						<div class="m30">
+							<!--标题-->
+							<div class="main-title">标题</div>
+							<!--文本-->
+							<div class="text-warning bg-warning p20 mb20 mt20">
+								注意：店铺优惠券可与店铺其它营销工具（如：全店满送、满减优惠等）叠加使用，请谨慎设置店铺优惠券优惠力度！“展示给买家”指店铺优惠券在店铺首页、商品详情页展示。 
+							</div>
+							
+							<!--切换-->
+							<ul class="ccj-nav ccj-nav-tabs clearfix" id="myTab">
+								<li class="active">
+									<a href="#home" data-toggle="tab">通用文字</a>
+								</li>
+								<li>
+									<a href="#profile" data-toggle="tab">通用图片</a>
+								</li>
+							</ul>
+							<div id="myTabContent" class="tab-content">
+								<div class="tab-pane fade active in" id="home">
+									<div class="mt30">
+										<div class="clearfix mb20">
+											<button type="button" class="btn btn-warning btn-lg fr" data-toggle="modal" data-target=".create-general-txt">创建通用文字</button>
+										</div>
+										
+										<table class="table table-bordered">
+											<thead class="bgf1">
+												<tr>
+													<th>ID</th>
+													<th>使用条件和数量</th>
+													<th>每人限领</th>
+													<th>已支付</th>
+													<th>使用时间</th>
+													<th>交易金额</th>
+													<th>是否满意</th>
+													<th>操作</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td rowspan="2">1</td>
+													<td>中文</td>
+													<td>1</td>
+													<td>1</td>
+													<td>20</td>
+													<td>20</td>
+													<td>是</td>
+													<td>
+														<div><button class="btn btn-sm btn-success">导出客户</button></div>
+														<div class="mt5"><button class="btn btn-sm btn-success">导出客户</button></div>
+
+													</td>
+												</tr>
+												<tr>
+													<td>中文</td>
+													<td>20</td>
+													<td>20</td>
+													<td>20</td>
+													<td>20</td>
+													<td>是</td>
+													<td><button class="btn btn-sm btn-success">导出客户</button></td>
+												</tr>
+												<tr>
+													<td>2</td>
+													<td class="img-sm"><img src="../img/cl_1.png" /></td>
+													<td>30</td>
+													<td>30</td>
+													<td>30</td>
+													<td>30</td>
+													<td>不满意</td>
+													<td>文本</td>
+												</tr>
+												<tr>
+													<td>4</td>
+													<td class="img-sm"><img src="../img/cl_1.png" />卫衣秋装新款</td>
+													<td>30</td>
+													<td>30</td>
+													<td>30</td>
+													<td>30</td>
+													<td>满意</td>
+													<td>文本</td>
+												</tr>
+												<tr>
+													<td>3</td>
+													<td colspan="2">中文</td>
+													<td>1张</td>
+													<td>一个小时</td>
+													<td>100</td>
+													<td>非常满意</td>
+													<td>文本</td>
+												</tr>
+											</tbody>
+										</table>
+																		<div>
+									<ul class="pagination clearfix" id="pageMode">
+										<li>
+											<a href="#">首页</a>
+										</li>
+										<li>
+											<a href="#">上一页</a>
+										</li>
+										<li class="active">
+											<a href="#">1</a>
+										</li>
+										<li>
+											<a href="#">2</a>
+										</li>
+										<li>
+											<a href="#">3</a>
+										</li>
+										<li>
+											<a href="#">4</a>
+										</li>
+										<li>
+											<a href="#">5</a>
+										</li>
+										<li>
+											<a href="#">下一页</a>
+										</li>
+										<li>
+											<a href="#">尾页</a>
+										</li>
+										<div>
+											<span>共5页，跳至</span>
+											<input />
+											<span>页</span>
+										</div>
+										<li>
+											<a href="#">确定</a>
+										</li>
+									</ul>
+								</div>
+
+
+									</div>
+								</div>
+
+								<!--2-->
+								<div class="tab-pane fade" id="profile">
+									<div class="mt30">
+										<div class="clearfix mb20">
+											<button type="button" class="btn btn-warning btn-lg fr" data-toggle="modal" data-target=".create-general-photo">创建通用图片</button>
+										</div>
+										<table class="table">
+											<thead class="bgf1">
+												<tr>
+													<th>ID</th>
+													<th>使用条件和数量</th>
+													<th>每人限领</th>
+													<th>已支付</th>
+													<th>使用时间</th>
+													<th>交易金额</th>
+													<th>是否满意</th>
+													<th>操作</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>1</td>
+													<td>中文</td>
+													<td>1</td>
+													<td>1</td>
+													<td>20</td>
+													<td>20</td>
+													<td>是</td>
+													<td>
+														<div><button class="btn btn-sm btn-success">导出客户</button></div>
+														<div class="mt5"><button class="btn btn-sm btn-success">导出客户</button></div>
+
+													</td>
+												</tr>
+												<tr>
+													<td>2</td>
+													<td>中文</td>
+													<td>20</td>
+													<td>20</td>
+													<td>20</td>
+													<td>20</td>
+													<td>是</td>
+													<td><button class="btn btn-sm btn-success">导出客户</button></td>
+												</tr>
+												<tr>
+													<td>2</td>
+													<td class="img-sm"><img src="../img/cl_1.png" /></td>
+													<td>30</td>
+													<td>30</td>
+													<td>30</td>
+													<td>30</td>
+													<td>不满意</td>
+													<td><button class="btn btn-sm btn-success">导出客户</button></td>
+												</tr>
+												<tr>
+													<td>4</td>
+													<td class="img-sm">卫衣秋装新款</td>
+													<td>30</td>
+													<td>30</td>
+													<td>30</td>
+													<td>30</td>
+													<td>满意</td>
+													<td><button class="btn btn-sm btn-success">导出客户</button></td>
+												</tr>
+												<tr>
+													<td>3</td>
+													<td>中文</td>
+													<td>1张</td>
+													<td>1张</td>
+													<td>一个小时</td>
+													<td>100</td>
+													<td>非常满意</td>
+													<td><button class="btn btn-sm btn-success">导出客户</button></td>
+												</tr>
+											</tbody>
+										</table>
+																		<div>
+									<ul class="pagination clearfix" id="pageMode">
+										<li>
+											<a href="#">首页</a>
+										</li>
+										<li>
+											<a href="#">上一页</a>
+										</li>
+										<li class="active">
+											<a href="#">1</a>
+										</li>
+										<li>
+											<a href="#">2</a>
+										</li>
+										<li>
+											<a href="#">3</a>
+										</li>
+										<li>
+											<a href="#">4</a>
+										</li>
+										<li>
+											<a href="#">5</a>
+										</li>
+										<li>
+											<a href="#">下一页</a>
+										</li>
+										<li>
+											<a href="#">尾页</a>
+										</li>
+										<div>
+											<span>共5页，跳至</span>
+											<input />
+											<span>页</span>
+										</div>
+										<li>
+											<a href="#">确定</a>
+										</li>
+									</ul>
+								</div>
+
+
+									</div>
+								</div>
+
+、
+							</div>
+						</div>
+
+					</div>
+					<!--表格-->
+
+				</div>
+			</div>
+		</div>
+
+		<!--<script src="js/jquery-2.1.4.min.js"></script>-->
+		<!--<script src="js/bootstrap.min.js"></script>-->
+		<!--<script src="js/director.min.js"></script>-->
+		<script src="../js/_ccj/_require.js"></script>
+		<script src="../js/index.js"></script>
+		<!--<script src="js/calendar/_require.js"></script>-->
+		<!--<script src="js/calendar/date.js"></script>-->
+		<script id="modulejs"></script>
+	</body>
+
+</html>

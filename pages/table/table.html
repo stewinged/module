@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>表格</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+
+	</head>
+
+	<body>
+		<header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
+			<div class="container">
+				<div class="navbar-header">
+					<span class="logo"><img src="../img/logo.png"/></span>
+					<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+						<ul class="nav navbar-nav">
+							<li class="active">
+								<a href="#">起步</a>
+							</li>
+							<li>
+								<a href="#">全局 CSS 样式</a>
+							</li>
+							<li>
+								<a href="#">组件</a>
+							</li>
+							<li>
+								<a href="#">JavaScript 插件</a>
+							</li>
+							<li>
+								<a href="#">定制</a>
+							</li>
+						</ul>
+						<ul class="nav navbar-nav navbar-right">
+							<li>
+								<a href="#">高薪工作</a>
+							</li>
+							<li>
+								<a href="#">优站精选</a>
+							</li>
+							<li>
+								<a href="#">官方博客</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+		</header>
+
+		<div class="container  main-bg ccj-height">
+			<div class="row">
+				<div class="col-xs-2">
+					<div class="navbar-default sidebar" role="navigation">
+						<div class="sidebar-nav navbar-collapse">
+							<ul class="nav in" id="side-menu">
+								<li class="sidebar-search">
+									<div class="input-group custom-search-form">
+										<input type="text" class="form-control" placeholder="Search...">
+										<span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+									</div>
+									<!-- /input-group -->
+								</li>
+								<li>
+									<a href="#"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+								</li>
+								<li>
+									<a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
+									<ul class="nav nav-second-level collapse">
+										<li>
+											<a href="#">Flot Charts</a>
+										</li>
+										<li>
+											<a href="#">Morris.js Charts</a>
+										</li>
+									</ul>
+									<!-- /.nav-second-level -->
+								</li>
+								<li>
+									<a href="#"><i class="fa fa-table fa-fw"></i> Tables</a>
+								</li>
+								<li>
+									<a href="#"><i class="fa fa-edit fa-fw"></i> Forms</a>
+								</li>
+								<li>
+									<a href="#"><i class="fa fa-wrench fa-fw"></i> UI Elements<span class="fa arrow"></span></a>
+									<ul class="nav nav-second-level collapse in">
+										<li>
+											<a href="#">Panels and Wells</a>
+										</li>
+										<li>
+											<a href="#" class="active">Buttons</a>
+										</li>
+										<li>
+											<a href="#">Notifications</a>
+										</li>
+										<li>
+											<a href="#">Typography</a>
+										</li>
+										<li>
+											<a href="#l"> Icons</a>
+										</li>
+										<li>
+											<a href="#">Grid</a>
+										</li>
+									</ul>
+									<!-- /.nav-second-level -->
+								</li>
+								<li>
+									<a href="#"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
+									<ul class="nav nav-second-level collapse">
+										<li>
+											<a href="#">Second Level Item</a>
+										</li>
+										<li>
+											<a href="#">Second Level Item</a>
+										</li>
+										<li>
+											<a href="#">Third Level <span class="fa arrow"></span></a>
+											<ul class="nav nav-third-level collapse">
+												<li>
+													<a href="#">Third Level Item</a>
+												</li>
+												<li>
+													<a href="#">Third Level Item</a>
+												</li>
+												<li>
+													<a href="#">Third Level Item</a>
+												</li>
+												<li>
+													<a href="#">Third Level Item</a>
+												</li>
+											</ul>
+											<!-- /.nav-third-level -->
+										</li>
+									</ul>
+									<!-- /.nav-second-level -->
+								</li>
+								<li>
+									<a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
+									<ul class="nav nav-second-level collapse">
+										<li>
+											<a href="blank.html">Blank Page</a>
+										</li>
+										<li>
+											<a href="login.html">Login Page</a>
+										</li>
+									</ul>
+									<!-- /.nav-second-level -->
+								</li>
+							</ul>
+						</div>
+						<!-- /.sidebar-collapse -->
+					</div>
+				</div>
+				<div class="col-xs-10">
+					<div class="main" id="table">
+						
+						<div class="bs-example m30">
+							<p class="">表格样式1(有边框)</p>
+							<table class="table table-bordered">
+								<thead class="bgf1">
+									<tr>
+										<th>ID</th>
+										<th>使用条件和数量</th>
+										<th>每人限领</th>
+										<th>已支付</th>
+										<th>使用时间</th>
+										<th>交易金额</th>
+										<th>是否满意</th>
+										<th>操作</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td rowspan="2">1</td>
+										<td>中文</td>
+										<td>1</td>
+										<td>1</td>
+										<td>20</td>
+										<td>20</td>
+										<td>是</td>
+										<td>
+											<div><button class="btn btn-sm btn-success">导出客户</button></div>
+											<div class="mt5"><button class="btn btn-sm btn-success">导出客户</button></div>
+
+										</td>
+									</tr>
+									<tr>
+										<td>中文</td>
+										<td>20</td>
+										<td>20</td>
+										<td>20</td>
+										<td>20</td>
+										<td>是</td>
+										<td><button class="btn btn-sm btn-success">导出客户</button></td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td class="img-sm"><img src="../img/cl_1.png" /></td>
+										<td>30</td>
+										<td>30</td>
+										<td>30</td>
+										<td>30</td>
+										<td>不满意</td>
+										<td>文本</td>
+									</tr>
+									<tr>
+										<td>4</td>
+										<td class="img-sm"><img src="../img/cl_1.png" />卫衣秋装新款</td>
+										<td>30</td>
+										<td>30</td>
+										<td>30</td>
+										<td>30</td>
+										<td>满意</td>
+										<td>文本</td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td colspan="2">中文</td>
+										<td>1张</td>
+										<td>一个小时</td>
+										<td>100</td>
+										<td>非常满意</td>
+										<td>文本</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+	
+						
+						<div class="bs-example m30">
+							<p class="">表格样式2(无边框)</p>
+							<table class="table">
+								<thead class="bgf1">
+									<tr>
+										<th>ID</th>
+										<th>使用条件和数量</th>
+										<th>每人限领</th>
+										<th>已支付</th>
+										<th>使用时间</th>
+										<th>交易金额</th>
+										<th>是否满意</th>
+										<th>操作</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>中文</td>
+										<td>1</td>
+										<td>1</td>
+										<td>20</td>
+										<td>20</td>
+										<td>是</td>
+										<td>
+											<div><button class="btn btn-sm btn-success">导出客户</button></div>
+											<div class="mt5"><button class="btn btn-sm btn-success">导出客户</button></div>
+
+										</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>中文</td>
+										<td>20</td>
+										<td>20</td>
+										<td>20</td>
+										<td>20</td>
+										<td>是</td>
+										<td><button class="btn btn-sm btn-success">导出客户</button></td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td class="img-sm"><img src="../img/cl_1.png" /></td>
+										<td>30</td>
+										<td>30</td>
+										<td>30</td>
+										<td>30</td>
+										<td>不满意</td>
+										<td><button class="btn btn-sm btn-success">导出客户</button></td>
+									</tr>
+									<tr>
+										<td>4</td>
+										<td class="img-sm">卫衣秋装新款</td>
+										<td>30</td>
+										<td>30</td>
+										<td>30</td>
+										<td>30</td>
+										<td>满意</td>
+										<td><button class="btn btn-sm btn-success">导出客户</button></td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td>中文</td>
+										<td>1张</td>
+										<td>1张</td>
+										<td>一个小时</td>
+										<td>100</td>
+										<td>非常满意</td>
+										<td><button class="btn btn-sm btn-success">导出客户</button></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+					</div>
+					<!--表格-->
+				</div>
+			</div>
+		</div>
+		<script src="js/jquery-2.1.4.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="vendor/metisMenu/metisMenu.min.js"></script>
+	</body>
+
+</html>

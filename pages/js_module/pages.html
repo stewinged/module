@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+
+	</head>
+
+	<body>
+		<header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
+			<div class="container">
+				<div class="navbar-header">
+					<span class="logo"><img src="../img/logo.png"/></span>
+				</div>
+				<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+					<ul class="nav navbar-nav">
+						<li>
+							<a href="#">楚楚街后台模板</a>
+						</li>
+						<!--///syc  起步什么删了-->
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-2">
+					<div class="navbar-default sidebar" role="navigation">
+						<div class="sidebar-nav navbar-collapse">
+							<ul class="nav in" id="side-menu">
+								<!--///syc  serach删了-->
+								<li>
+									<!--///syc  加class 和href-->
+									<a href="#/button" class="navside_fir"><i class="fa fa-dashboard fa-fw"></i> 按钮</a>
+
+								</li>
+								<li>
+									<a href="#/table" class="navside_fir"><i class="fa fa-bar-chart-o fa-fw"></i> 表格<span class="fa arrow"></span></a>
+
+									<!-- /.nav-second-level -->
+								</li>
+								<li>
+									<a href="javascript:;" class="navside_fir"><i class="fa fa-table fa-fw"></i>弹窗</a>
+									<ul class="nav nav-second-level Ndisplay">
+										<li>
+											<a href="flot.html">类目弹窗</a>
+										</li>
+										<li>
+											<a href="morris.html">提示弹窗</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="javascript:;" class="navside_fir"><i class="fa fa-edit fa-fw"></i>表单</a>
+								</li>
+								<li>
+									<a href="javascript:;" class="navside_fir"><i class="fa fa-wrench fa-fw"></i>js库<span class="fa arrow"></span></a>
+									<ul class="nav nav-second-level Ndisplay">
+										<li>
+											<a href="#">sdk</a>
+										</li>
+										<li>
+											<a href="#" class="active">分页</a>
+										</li>
+										<li>
+											<a href="#">页卡切换</a>
+										</li>
+										<li>
+											<a href="#">日历</a>
+										</li>
+										<li>
+											<a href="#">表单验证正则</a>
+										</li>
+									</ul>
+									<!-- /.nav-second-level -->
+								</li>
+
+							</ul>
+						</div>
+						<!-- /.sidebar-collapse -->
+					</div>
+				</div>
+				<div class="col-xs-10">
+					<!--按钮样式-->
+					<div class="main" id="pages">
+						<div class="panel panel-default m30">
+							<div class="panel-heading">
+								分页模板
+							</div>
+
+							<div class="panel-body">
+								<div>
+									<ul class="pagination clearfix" id="pageMode">
+										<li>
+											<a href="#">首页</a>
+										</li>
+										<li>
+											<a href="#">上一页</a>
+										</li>
+										<li class="active">
+											<a href="#">1</a>
+										</li>
+										<li>
+											<a href="#">2</a>
+										</li>
+										<li>
+											<a href="#">3</a>
+										</li>
+										<li>
+											<a href="#">4</a>
+										</li>
+										<li>
+											<a href="#">5</a>
+										</li>
+										<li>
+											<a href="#">下一页</a>
+										</li>
+										<li>
+											<a href="#">尾页</a>
+										</li>
+										<div>
+											<span>共5页，跳至</span>
+											<input />
+											<span>页</span>
+										</div>
+										<li>
+											<a href="#">确定</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+							<!-- /.panel-heading -->
+							<div class="panel-body">
+								<h4>实例</h4>
+								<textarea readonly="readonly" style="width:100%; height:800px; resize:none; outline: none;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+</head>
+<body>
+<!----------分页 start---------->
+<div class="panel-body">
+	<div >
+		  <ul class="pagination clearfix" id="page1">
+				<li><a href="javascript:;">首页</a></li>
+				<li><a href="javascript:;">上一页</a></li>
+				<li class="active"><a href="javascript:;">1</a></li>
+				<li><a href="javascript:;">2</a></li>
+				<li><a href="javascript:;">3</a></li>
+				<li><a href="javascript:;">4</a></li>
+				<li><a href="javascript:;">5</a></li>
+				<li><a href="javascript:;">下一页</a></li>
+				<li><a href="javascript:;">尾页</a></li>
+				<div>
+					<span>共5页，跳至</span>
+					<input type="text"/>
+					<span>页</span>
+				</div>
+			    <li><a href="javascript:;">确定</a></li>
+		  </ul>
+	</div>
+</div>
+<!----------分页 end---------->
+
+</body>
+<script src="js/pages.js"></script>
+<script>
+	////getAjaxData 是发送ajax请求   获取数据 创建页面   //json是一个{current_page当前页:1,count_page总页数:10}  fn为回调函数 id是Ul的id
+	function getAjaxData(data){
+		$.post(URL,data,function(e){
+			var json = eval('('+e+')');
+			console.log(json)
+			new Page(json,id,fn);
+		})
+	}
+	////fn(num)  num是第几页   fn是分页的回调函数   data可以设置一个全局变量
+	function fn(num){
+		///定义数据   data.p  表示获取第几页的数据
+		data.p = num;
+		getAjaxData(data);
+	}
+</script>
+</html>
+									</textarea>
+
+							</div>
+							<!-- /.panel-body -->
+						</div>
+
+					</div>
+					<!--表格-->
+
+				</div>
+			</div>
+		</div>
+		<script src="js/jquery-2.1.4.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/director.min.js"></script>
+		<script>
+			$('.navside_fir').on('click', function() {
+				var oUl = $(this).siblings('ul');
+				if(oUl.length > 0) {
+					if(oUl.hasClass('Ndisplay')) {
+						oUl.removeClass('Ndisplay')
+					} else {
+						oUl.addClass('Ndisplay')
+					}
+				}
+			})
+			var route = {
+				"/table": moduleChange,
+				"/button": moduleChange,
+			}
+
+			//初始化路由
+			var router = Router(route)
+			router.init();
+
+			function moduleChange() {
+				$('#showModule').empty();
+				var name = location.href.split('#')[1].substring(1);
+				var URL = name + '.html'
+				$('#showModule').load(URL + ' #' + name, function() {
+
+				});
+
+			}
+		</script>
+	</body>
+
+</html>

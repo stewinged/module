@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+		<meta http-equiv="X-UA-Compatible" content="IE=9" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="../css/style.css" />
+		<link rel="stylesheet" type="text/css" href="../css/mudule.css" />
+	</head>
+
+	<body>
+		<header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
+			<div class="container">
+				<div class="navbar-header">
+					<span class="logo"><img src="../img/logo.png"/></span>
+					<span class="name"><i>楚楚街后台模板</i></span>
+				</div>
+			</div>
+		</header>
+
+		<div class="container main-bg ccj-height">
+			<div class="row">
+				<div class="col-xs-2">
+					<div class="navbar-default sidebar h-per100" role="navigation">
+						<div class="sidebar-nav navbar-collapse">
+							<ul class="nav in" id="side-menu">
+								<!--///syc  serach删了-->
+								<li class="navside_fir">
+									<!--///syc  加class 和href-->
+
+									<p class="navside_first"><i class="fa-dashboard"><img src="../img/chevron.png"/></i>ui控件</p>
+
+									<ul class="nav nav-second-level">
+										<li class="navside_sec">
+											<a href="#/ui/button">按钮</a>
+										</li>
+										<li class="navside_sec">
+											<a href="#/ui/fontsize">字体</a>
+										</li>
+										<li class="navside_sec">
+											<a href="#/ui/text">文本样式</a>
+										</li>
+										<li class="navside_sec">
+											<a href="#/ui/layout">布局</a>
+										</li>
+									</ul>
+
+								</li>
+								<li class="navside_fir">
+
+									<p class="navside_first"><i class="fa-dashboard"><img src="../img/chevron.png"/></i> 页卡切换</p>
+									<ul class="nav nav-second-level">
+										<li class="navside_sec">
+											<a href="#/tab/tab">页卡切换</a>
+										</li>
+									</ul>
+								</li>
+								<li class="navside_fir">
+
+									<p class="navside_first"><i class="fa-dashboard"><img src="../img/chevron.png"/></i> 示例页面</p>
+									<ul class="nav nav-second-level">
+										<li class="navside_sec">
+											<a href="#/model/model">示例</a>
+										</li>
+										<li class="navside_sec module-nor">
+											<a href="../pages/showmodule.html" target="_blank">详情通用信息</a>
+										</li>
+									</ul>
+								</li>
+
+								<li class="navside_fir">
+									<p class="navside_first"> <i class="fa-dashboard"><img src="../img/chevron.png"/></i>表格<span class="fa arrow"></span></p>
+
+									<ul class="nav nav-second-level">
+										<li class="navside_sec">
+											<a href="#/table/table">表格</a>
+										</li>
+									</ul>
+
+									<!-- /.nav-second-level -->
+								</li>
+								<li class="navside_fir">
+									<p class="navside_first"><i class="fa-dashboard"><img src="../img/chevron.png"/></i>弹窗</p>
+									<ul class="nav nav-second-level">
+										<li class="navside_sec">
+											<a href="#/pannel/modal">提示弹窗</a>
+										</li>
+									</ul>
+								</li>
+								<li class="navside_fir">
+									<p class="navside_first"><i class="fa-dashboard"><img src="../img/chevron.png"/></i>表单</p>
+									<ul class="nav nav-second-level">
+										<li class="navside_sec">
+											<a href="#/form/form">表单</a>
+										</li>
+									</ul>
+								</li>
+								<li class="navside_fir">
+									<p class="navside_first"><i class="fa-dashboard"><img src="../img/chevron.png"/></i>js库<span class="fa arrow"></span></p>
+									<ul class="nav nav-second-level">
+										<li class="navside_sec">
+											<a href="#/sdk/index">sdk</a>
+										</li>
+										<li class="navside_sec">
+											<a href="#/js_module/pages">分页</a>
+										</li>
+										<li class="navside_sec">
+											<a href="#/js_module/regExp">表单验证正则</a>
+										</li>
+									</ul>
+									<!-- /.nav-second-level -->
+								</li>
+
+							</ul>
+						</div>
+						<!-- /.sidebar-collapse -->
+					</div>
+				</div>
+				<div class="col-xs-10" id="showModule">
+					<!--按钮样式-->
+					<div class="main" id="show">
+						<!--shopid存放-->
+						<p class="shopId" style="display: none"></p>
+
+						<!--错误提示框-->
+						<div class="modal fade in" tabindex="-2" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="false" style="display: none; z-index: 1100;" id="errorMsg"><div class="modal-backdrop fade in"></div>
+							<div class="modal-dialog modal-w400">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+										<h4 class="modal-title">错误提醒</h4>
+									</div>
+									<div class="modal-body">
+										<p class="errmsgShow">您的店铺不能上传“女装-衬衫”类目的商品，详细规则请查看楚楚街跨类目售卖商品规范&gt;&gt;。</p>
+									</div>
+									<div class="modal-footer align-ct">
+										<button type="button" class="btn btn-outline" data-dismiss="modal">确定</button>
+									</div>
+								</div>
+								<!-- /.modal-content -->
+							</div>
+							<!-- /.modal-dialog -->
+						</div>
+
+
+
+						<!--文本弹窗-->
+						<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" style="display: none;" id="textModule" data-backdrop="static" data-keyboard="false">
+							<div class="modal-dialog modal-w400">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+										<h4 class="modal-title fz16">创建通用文字</h4>
+									</div>
+									<div class="modal-body mt0">
+										<!--通用文字-->
+										<div class="main-title fz15 clearfix">
+											<span class="fl tit-text">文字:</span><textarea class="fl texta w200"></textarea>
+										</div>
+										<div>
+											<p class="tip-note">1.单条不超过50个汉字，标点符号算字数。<br>2. 可输入汉字，英文，数字，（中英文）<br>    常用标点符号，暂不支持其他字符。</p>
+										</div>
+										<div class="main-title fz15 caterange">适用范围:
+											<label class="radio-inline">
+												<input type="radio" name="range" data-index="1" value="option1" checked="">全部商品
+											</label>
+											<label class="radio-inline">
+												<input type="radio" name="range" data-index="2" value="option2">按商品ID
+											</label>
+											<label class="radio-inline">
+												<input type="radio" name="range" data-index="3" value="option3">按类目
+											</label>
+										</div>
+
+										<ul class="clearfix popup-category Ndisplay">
+											<li class="fl" style="margin-left: 60px;">
+												<ul class="first-menu ">
+													<li>
+														<p class="mg-clear"><i class="cid1"><span></span></i> <em class="overAuto">女装</em><img src="../img/sh-arrow.png" class="sh-arrow" /></p>
+														<ul class="second-menu menu-public Ndisplay">
+															<li><i class="cid2"><span></span></i>连衣裙</li>
+															<li><i class="cid2"><span></span></i>连衣裙</li>
+															<li><i class="cid2"><span></span></i>连衣裙</li>
+															<li><i class="cid2"><span></span></i>连衣裙</li>
+															<li><i class="cid2"><span></span></i>连衣裙</li>
+															<li><i class="cid2"><span></span></i>连衣裙</li>
+														</ul>
+													</li>
+													<li>
+														<p class="mg-clear"><i class="cid1"><span></span></i><em class="overAuto">男装</em><img src="../img/sh-arrow.png" class="sh-arrow" /></p>
+														<ul class="second-menu menu-public">
+															<li><i class="cid2"><span></span></i>连衣裙</li>
+															<li><i class="cid2"><span></span></i>连衣裙</li>
+															<li><i class="cid2"><span></span></i>连衣裙</li>
+															<li><i class="cid2"><span></span></i>连衣裙</li>
+															<li><i class="cid2"><span></span></i>连衣裙</li>
+															<li><i class="cid2"><span></span></i>连衣裙</li>
+														</ul>
+													</li>
+													<li>
+														<p class="mg-clear"><i class="cid1"><span></span></i><em class="overAuto">鞋靴</em><img src="../img/sh-arrow.png" class="sh-arrow" /></p>
+														<ul class="second-menu menu-public">
+															<li><i class="cid2"><span></span></i>连衣裙</li>
+															<li><i class="cid2"><span></span></i>连衣裙</li>
+															<li><i class="cid2"><span></span></i>连衣裙</li>
+															<li><i class="cid2"><span></span></i>连衣裙</li>
+															<li><i class="cid2"><span></span></i>连衣裙</li>
+															<li><i class="cid2"><span></span></i>连衣裙</li>
+														</ul>
+													</li>
+													<li>
+														<p class="mg-clear"><i class="cid1"><span></span></i><em class="overAuto">女装</em><img src="../img/sh-arrow.png" class="sh-arrow" /></p>
+														<ul class="second-menu menu-public">
+															<li><i class="cid2"><span></span></i>连衣裙</li>
+															<li><i class="cid2"><span></span></i>连衣裙</li>
+															<li><i class="cid2"><span></span></i>连衣裙</li>
+															<li><i class="cid2"><span></span></i>连衣裙</li>
+															<li><i class="cid2"><span></span></i>连衣裙</li>
+															<li><i class="cid2"><span></span></i>连衣裙</li>
+														</ul>
+													</li>
+												</ul>
+							
+											</li>
+										</ul>
+										<div class="checkCate Ndisplay">
+											<textarea class="texta"></textarea>
+											<p class="w220 ml70 mt5">商品ID用英文逗号隔开，数量不能超过店铺内商品总数并且不能超过100个</p>
+										</div>
+										<!--end-->
+									</div>
+									<div class="modal-footer align-ct">
+										<button type="button" class="btn btn-outline" id="submitText">提交</button>
+										<button type="button" class="btn btn-outline" data-dismiss="modal">取消</button>
+									</div>
+								</div>
+								<!-- /.modal-content -->
+							</div>
+							<!-- /.modal-dialog -->
+						</div>
+						
+						<!--通用图片-->
+						<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" style="display: none;" id="picModule" data-backdrop="static" data-keyboard="false">
+							<div class="modal-dialog modal-w400">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+										<h4 class="modal-title fz16">创建通用图片</h4>
+									</div>
+									<div class="modal-body mt0">
+										<!---->
+										<div class="clearfix picContain">
+											<label class="fl">图片:</label>
+											<div class="msg-rt fl">
+												<div><iframe id="myIframe" name="myIframe" style="display: none;"></iframe></div>
+												<div class="sc_photo fl-l msg-rt">
+													<form id="formPicUpload" class="dataform" action="/sqe.php?s=Image/productDetailTemplate_uploadImg" method="post" enctype="multipart/form-data" target="myIframe">
+														<img src="../img/addimg360.png" class="boxcolor fl-l" alt="" id="imgPre" style="width:260px; height:100px;">
+														<input type="file" name="pic" class="up_file" id="imgUpload">
+													</form>
+												</div>
+											</div>
+											<!--图片：<p class=""><img class="align-middle ml20 showPic" src="/publicseller/SQE/img/addimg360.png"/>-->
+											<!--<input type="file" name="pic" class="up_pic" id="imgUpload"></p>-->
+										</div>
+										<div class="update-info">
+											<h6>1. 固定宽高 单张宽340px,高130px,大小≤200k。</h6>
+											<h6>2. 格式：JPG,PNG。</h6>
+											<h6>3. 点击已上传的图片可修改</h6>
+										</div>
+										
+										<!---->
+										<div class="main-title fz15 caterange">适用范围:
+											<label class="radio-inline">
+												<input type="radio" name="rangepic" data-index="1" value="option1" checked="">全部商品
+											</label>
+											<label class="radio-inline">
+												<input type="radio" name="rangepic" data-index="2" value="option2">按商品ID
+											</label>
+											<label class="radio-inline">
+												<input type="radio" name="rangepic" data-index="3" value="option3">按类目
+											</label>
+										</div>
+
+										<ul class="clearfix popup-category Ndisplay">
+											<li class="fl" style="margin-left: 60px;">
+												<ul class="first-menu ">
+													<li>
+														<p class="mg-clear"><i><span></span></i>女装<img src="../img/sh-arrow.png" class="sh-arrow" /></p>
+														<ul class="second-menu menu-public">
+															<li><i><span class="block"></span></i>连衣裙<img src="../img/sh-arrow.png" class="sh-arrow" /></li>
+															<li><i><span></span></i>连衣裙<img src="../img/sh-arrow.png" class="sh-arrow" /></li>
+															<li><i><span></span></i>连衣裙<img src="../img/sh-arrow.png" class="sh-arrow" /></li>
+															<li><i><span></span></i>连衣裙<img src="../img/sh-arrow.png" class="sh-arrow" /></li>
+															<li><i><span></span></i>连衣裙<img src="../img/sh-arrow.png" class="sh-arrow" /></li>
+															<li><i><span></span></i>连衣裙<img src="../img/sh-arrow.png" class="sh-arrow" /></li>
+															<li><i><span></span></i>连衣裙<img src="../img/sh-arrow.png" class="sh-arrow" /></li>
+															<li><i><span></span></i>连衣裙<img src="../img/sh-arrow.png" class="sh-arrow" /></li>
+														</ul>
+													</li>
+													<li>
+														<p class="mg-clear"><i><span></span></i>男装<img src="../img/sh-arrow.png" class="sh-arrow" /></p>
+													</li>
+													<li>
+														<p class="mg-clear"><i><span></span></i>鞋靴<img src="../img/sh-arrow.png" class="sh-arrow" /></p>
+													</li>
+													<li>
+														<p class="mg-clear"><i><span></span></i>女装<img src="../img/sh-arrow.png" class="sh-arrow" /></p>
+													</li>
+												</ul>
+
+											</li>
+										</ul>
+										<div class="checkCate Ndisplay">
+											<textarea class="texta"></textarea>
+											<p class="w220 ml70 mt5">商品ID用英文逗号隔开，数量不能超过店铺内商品总数并且不能超过100个</p>
+										</div>
+
+										<!--end-->
+									</div>
+									<div class="modal-footer align-ct">
+										<button type="button" class="btn btn-outline" data-dismiss="modal">提交</button>
+										<button type="button" class="btn btn-outline" data-dismiss="modal">取消</button>
+									</div>
+								</div>
+								<!-- /.modal-content -->
+							</div>
+							<!-- /.modal-dialog -->
+						</div>
+						
+						
+						<div class="m30">
+							<!--标题-->
+							<div class="main-title btl">详情页通用信息</div>
+							<!--文本-->
+							<div class="text-warning bg-warning p20 mb20 mt20">
+									1. 详情页通用信息会展示在指定的所有商品的详情中，无须单独添加。<br>
+									2. 可添加至全部商品，也可按商品添加，也可按类目添加。<br>
+									3. 每个商品最多可设置2个文字2个图片，如添加多个，则展示最初的2个。<br>
+									4. 详情页内容从上到下依次是：通用文字，通用图片，详情。<br>
+									5. 每个类型的通用信息，如出现2个时，根据添加时间排序，先添加的在上方，后添加的在下方。<br>
+									6. 目前通用文字和通用图片只在您使用“详细编辑”时才展示，如您使用了快速编辑，则不展示通用文字和图片。<br>
+									7. 目前通用模板信息生效需要等待几分钟。<br>
+							</div>
+							
+							<!--切换-->
+							<ul class="ccj-nav ccj-nav-tabs clearfix" id="myTab">
+								<li class="active">
+									<a href="#home" data-toggle="tab">通用文字</a>
+								</li>
+								<li>
+									<a href="#profile" data-toggle="tab">通用图片</a>
+								</li>
+							</ul>
+							<div id="myTabContent" class="tab-content">
+								<!--text-->
+								<div class="tab-pane fade active in" id="home">
+									<div class="mt30">
+										<div class="clearfix mb20">
+											<button type="button" class="btn btn-warning btn-lg fr textModule">创建通用文字</button>
+										</div>
+										
+										<table class="table table-bordered">
+											<thead class="bgf1">
+												<tr>
+													<th>编号</th>
+													<th style="width:350px;">通用文字</th>
+													<th>适用范围</th>
+													<th>状态</th>
+													<th>操作时间</th>
+													<th>操作</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>300</td>
+													<td>中文</td>
+													<td>按类目名称</td>
+													<td>中文</td>
+													<td>
+														2016-11-01<br>
+														11:45:15
+													</td>
+													<td>
+														<div><button class="btn btn-sm btn-success">编辑</button></div>
+														<div class="mt5"><button class="btn btn-sm btn-success">删除</button></div>
+														<div class="mt5"><button class="btn btn-sm btn-success">启用</button></div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+
+
+
+									</div>
+								</div>
+
+								<!--pic-->
+								<div class="tab-pane fade" id="profile">
+									<div class="mt30">
+										<div class="clearfix mb20">
+											<button type="button" class="btn btn-warning btn-lg fr picModule" data-toggle="modal" >创建通用图片</button>
+										</div>
+										<table class="table table-bordered">
+											<thead class="bgf1">
+											<tr>
+												<th>编号</th>
+												<th style="width:350px;">通用图片</th>
+												<th>适用范围</th>
+												<th>状态</th>
+												<th>操作时间</th>
+												<th>操作</th>
+											</tr>
+											</thead>
+											<tbody>
+											<tr>
+												<td>300</td>
+												<td>
+													<img src="../img/addimg360.png" style="width:320px; height:130px;" alt="">
+												</td>
+												<td>去不累都会看</td>
+												<td>中文</td>
+												<td>
+													2016-11-01<br>
+													11:45:15
+												</td>
+												<td>
+													<div><button class="btn btn-sm btn-success">编辑</button></div>
+													<div class="mt5"><button class="btn btn-sm btn-success">删除</button></div>
+													<div class="mt5"><button class="btn btn-sm btn-success">启用</button></div>
+												</td>
+											</tr>
+											</tbody>
+										</table>
+
+
+
+									</div>
+								</div>
+								<!--分页-->
+								<div>
+									<ul class="pagination clearfix" id="pageMode">
+										<li>
+											<a href="#">首页</a>
+										</li>
+										<li>
+											<a href="#">上一页</a>
+										</li>
+										<li class="active">
+											<a href="#">1</a>
+										</li>
+										<li>
+											<a href="#">2</a>
+										</li>
+										<li>
+											<a href="#">3</a>
+										</li>
+										<li>
+											<a href="#">4</a>
+										</li>
+										<li>
+											<a href="#">5</a>
+										</li>
+										<li>
+											<a href="#">下一页</a>
+										</li>
+										<li>
+											<a href="#">尾页</a>
+										</li>
+										<div>
+											<span>共5页，跳至</span>
+											<input />
+											<span>页</span>
+										</div>
+										<li>
+											<a href="#">确定</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<!--表格-->
+
+				</div>
+			</div>
+		</div>
+
+		<!--<script src="js/jquery-2.1.4.min.js"></script>-->
+		<!--<script src="js/bootstrap.min.js"></script>-->
+		<!--<script src="js/director.min.js"></script>-->
+		<script src="../js/_ccj/_require.js"></script>
+		<script src="../js/index.js"></script>
+		<!--<script src="js/calendar/_require.js"></script>-->
+		<!--<script src="js/calendar/date.js"></script>-->
+		<script id="modulejs" src="../js/module.js"></script>
+	</body>
+
+</html>
